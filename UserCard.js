@@ -6,7 +6,10 @@ userCardTemplate.innerHTML = `
         }
     </style>
     <div class="user-card">
-        <h3></h3>
+        <img />
+        <div>
+            <h3></h3>
+        </div>
     </div>
 `;
 
@@ -19,6 +22,7 @@ class UserCard extends HTMLElement {
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.appendChild(userCardTemplate.content.cloneNode(true));
         this.shadowRoot.querySelector('h3').innerText = this.getAttribute('name');
+        this.shadowRoot.querySelector('img').src = this.getAttribute('avatar');
     }
 }
 
