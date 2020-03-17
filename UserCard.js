@@ -29,8 +29,8 @@ userCardTemplate.innerHTML = `
         <div>
             <h3></h3>
             <div class="info">
-                <p>EMAIL</p>
-                <p>PHONE</p>
+                <p> <slot name="name" /> </p>
+                <p> <slot name="phone" /> </p>
             </div>
             <button class="util_toggle-info">Hide Info</button>
         </div>
