@@ -2,7 +2,7 @@ class UserCard extends HTMLElement {
     constructor(){
         super();
 
-        this.innerHTML = `John Doe`;
+        this.innerHTML = `<style>h3 { color: coral }</style> <h3>${this.getAttribute('name')}</h3>`;
     }
 }
 
